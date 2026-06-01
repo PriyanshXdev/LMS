@@ -8,20 +8,22 @@ import java.util.List;
 
 @Service
 public class BookService {
-    private BookRepository bookRepository;
+
+    private final BookRepository bookRepository;
 
     public BookService(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
 
-    public Book saveBook(Book book){
+    public Book saveBook(Book book) {
         return bookRepository.save(book);
     }
-    public Book getBookById(int id){
+
+    public Book getBookById(int id) {
         return bookRepository.findById(id).orElse(null);
     }
-    public List<Book> getBookByTitle(String title){
-        return bookRepository.findByAllIgnoringCaseTitle(title);
-    }
 
+    public List<Book> getBookByTitle(String title) {
+        return bookRepository.findByTitleIgnoringCase(title);
+    }
 }

@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Library Management System</title>
-<link rel="stylesheet" href="css/add_book.css">
+<link rel="stylesheet" href="css/AddBook.css">
 </head>
 <body>
 	<%@include file="header.html" %>
