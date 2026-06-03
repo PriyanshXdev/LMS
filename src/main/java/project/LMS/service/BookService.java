@@ -24,6 +24,6 @@ public class BookService {
     }
 
     public List<Book> getBookByTitle(String title) {
-        return bookRepository.findByTitleIgnoringCase(title);
+        return bookRepository.findByTitleIgnoreCase(title);
     }
 }

@@ -5,5 +5,5 @@ import project.LMS.model.Book;
 import java.util.List;
 
 public interface BookRepository extends JpaRepository<Book, Integer> {
-    List<Book> findByTitleIgnoringCase(String title);
+    List<Book> findByTitleIgnoreCase(String title);
 }
