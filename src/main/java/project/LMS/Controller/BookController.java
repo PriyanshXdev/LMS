@@ -22,15 +22,15 @@ public class BookController {
         return "index";
     }
 
-    @GetMapping("/test")
-    @ResponseBody
-    public String test() {
-        return "Controller Working";
+    @GetMapping("/addbook")
+    public String addBookPage() {
+        return "AddBook";
     }
 
+
     @PostMapping("/addbook")
-    public String saveBook(@ModelAttribute Book book){
+    public String saveBook(@ModelAttribute Book book) {
         bookService.saveBook(book);
-        return "index";
+        return "redirect:/";
     }
 }

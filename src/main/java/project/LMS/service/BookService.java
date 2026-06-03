@@ -1,11 +1,9 @@
 package project.LMS.service;
-
 import org.springframework.stereotype.Service;
 import project.LMS.model.Book;
 import project.LMS.repository.BookRepository;
 
 import java.util.List;
-
 @Service
 public class BookService {
 
@@ -24,6 +22,6 @@ public class BookService {
     }
 
     public List<Book> getBookByTitle(String title) {
-        return bookRepository.findByTitleIgnoreCase(title);
+        return bookRepository.findByTitleIgnoringCase(title);
     }
 }

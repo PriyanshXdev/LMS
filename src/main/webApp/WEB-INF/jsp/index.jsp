@@ -33,7 +33,7 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="AddBook.jsp">Add Book</a>
+             <a class="nav-link" href="/addbook">Add Book</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="ViewBooks">View Books</a>
@@ -53,8 +53,8 @@
           Organize your library with ease — add, edit, and manage all your books
           efficiently.
         </p>
-        <a href="viewBooks" class="btn-main mt-3">📖 View Books</a>
-        <a href="Add-Book.jsp" class="btn-main mt-3 ms-2">➕ Add New Book</a>
+        <a href="ViewBooks" class="btn-main mt-3">📖 View Books</a>
+        <a href="AddBook.jsp" class="btn-main mt-3 ms-2">➕ Add New Book</a>
       </div>
     </section>
 
