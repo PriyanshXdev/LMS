@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <body>
     <%@include file="header.html" %>
 
@@ -31,14 +34,18 @@
                                 <td>${book.author}</td>
                                 <td>${book.isbn}</td>
                                 <td>${book.publishedYear}</td>
-                                <td>
-                                    <a href="deleteBook?id=${book.id}" title="Delete" style="margin-right: 10px; color: #dc3545;">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </a>
-                                    <a href="editBook?id=${book.id}" title="Edit" style="color: #1a56a0;">
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                    </a>
-                                </td>
+                               <td>
+
+                               <a href="/deleteBook?id=${book.id}" title="Delete" style="color: #dc3545; margin-right: 10px;">
+                                   <i class="fa-solid fa-trash"></i>
+                               </a>
+
+                               <% /*
+                             <a href="/editBook?id=${book.id}" title="Edit" style="color: #1a56a0;">
+                                   <i class="fa-solid fa-pen-to-square"></i>
+                               </a>
+                               */ %>
+                               	</td>
                             </tr>
                         </c:forEach>
                     </tbody>
