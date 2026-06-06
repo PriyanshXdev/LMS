@@ -15,15 +15,15 @@ public class Book {
     private String author;
     @Column(name = "ISBN")
     private String isbn;
-    @Column(name = "PUBLISHED")
-    private Integer publishYear;
+    @Column(name = "PUBLISHED_YEAR")
+    private Integer publishedYear;
 
-    public Book(Integer id, String title, String author, String isbn, Integer publishYear) {
+    public Book(Integer id, String title, String author, String isbn, Integer publishedYear) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.isbn = isbn;
-        this.publishYear = publishYear;
+        this.publishedYear = publishedYear;
     }
     public Book() {
     }
@@ -61,12 +61,12 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public Integer getPublishYear() {
-        return publishYear;
+    public Integer getPublishedYear() {
+        return publishedYear;
     }
 
-    public void setPublishYear(Integer publishYear) {
-        this.publishYear = publishYear;
+    public void setPublishedYear(Integer publishedYear) {
+        this.publishedYear = publishedYear;
     }
 
 

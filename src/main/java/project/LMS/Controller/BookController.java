@@ -1,12 +1,15 @@
 package project.LMS.Controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import project.LMS.model.Book;
 import project.LMS.service.BookService;
+
+import java.util.List;
 
 @Controller
 public class BookController {
@@ -31,6 +34,20 @@ public class BookController {
     @PostMapping("/addbook")
     public String saveBook(@ModelAttribute Book book) {
         bookService.saveBook(book);
-        return "redirect:/";
+        return "redirect:/viewBooks";
+    }
+
+    @GetMapping("/viewBooks")
+    public String viewbooks(Model model){
+        List<Book> books =bookService.getAllBooks();
+
+        System.out.println("Total books found: " + books.size());
+        for(Book b : books) {
+            System.out.println("Book: " + b.getId() + " " + b.getTitle() + " " + b.getPublishedYear());
+        }
+
+
+        model.addAttribute("books",books);
+        return "ViewBooks";
     }
 }

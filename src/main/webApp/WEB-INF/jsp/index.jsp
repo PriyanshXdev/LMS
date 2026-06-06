@@ -32,12 +32,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-            <li class="nav-item">
+           <li class="nav-item">
              <a class="nav-link" href="/addbook">Add Book</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ViewBooks">View Books</a>
-            </li>
+
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="/viewBooks">View Books</a>
+           </li>
             <li class="nav-item"><a class="nav-link" href="#">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
           </ul>
@@ -53,8 +54,8 @@
           Organize your library with ease — add, edit, and manage all your books
           efficiently.
         </p>
-        <a href="ViewBooks" class="btn-main mt-3">📖 View Books</a>
-        <a href="AddBook.jsp" class="btn-main mt-3 ms-2">➕ Add New Book</a>
+     <a href="/viewbooks" class="btn-main mt-3">📖 View Books</a>
+     <a href="/addbook" class="btn-main mt-3 ms-2">➕ Add New Book</a>
       </div>
     </section>
 
@@ -74,12 +75,7 @@
           🎥 Watch the complete step-by-step guide for this Library Management
           System on YouTube.
         </p>
-        <a
-          href="https://www.youtube.com/@CodingWithSudhir"
-          target="_blank"
-          class="btn-main"
-          >▶ Watch Now</a
-        >
+
       </div>
     </section>
 
