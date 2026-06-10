@@ -1,5 +1,6 @@
 package project.LMS.service;
 import org.springframework.stereotype.Service;
+import project.LMS.exception.ResourceNotFoundException;
 import project.LMS.model.Book;
 import project.LMS.repository.BookRepository;
 
@@ -18,7 +19,7 @@ public class BookService {
     }
 
     public Book getBookById(int id) {
-        return bookRepository.findById(id).orElse(null);
+        return bookRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Book not found with id: " + id));
     }
 
     public List<Book> getBookByTitle(String title) {
